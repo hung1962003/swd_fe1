@@ -1,0 +1,45 @@
+// SCSS
+.list-container {
+    padding: 40px;
+    .doctor-list {
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .doctor-card {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+        padding: 15px;
+        .doctor-info {
+          h3 {
+            margin: 0;
+            font-size: 18px;
+          }
+          p {
+            margin: 5px 0;
+            color: #666;
+          }
+        }
+      }
+    }
+    .product-list {
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .view-more-btn {
+        height: 45px;
+        border-radius: 20px;
+        font-size: 16px;
+        
+        background-color: #1e88e5;
+        color: white;
+        &:hover {
+          background-color: #1565c0;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,192 @@
+.loginPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid rgba(0, 123, 255, 0.3);
+    padding: 10px;
+  }
+
+  .forget-password {
+    text-align: right;
+    width: 100%;
+    margin-top: 5px;
+    color: #007bff;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .btnStyle {
+    width: 100%;
+    background: #007bff;
+    color: #fff;
+    border-radius: 20px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    &:hover {
+      background: #0056b3;
+    }
+  }
+
+  .or-divider {
+    text-align: center;
+    font-weight: bold;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    &::before,
+    &::after {
+      content: "";
+      flex-grow: 1;
+      height: 1px;
+      background: #007bff;
+      margin: 0 10px;
+    }
+  }
+
+  .login-footer {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+
+    a {
+      color: #007bff;
+    }
+  }
+
+  /* Căn chỉnh nút Google */
+  .google-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px;
+    background: #ffffff;
+    border: 2px solid #007bff;
+    color: #007bff;
+    font-weight: 400;
+    font-size: 14px;
+
+    &:hover {
+      background: #007bff;
+      color: white;
+    }
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+  .loginPage {
+    padding: 10px;
+  }
+
+  .loginPage__left {
+    width: 90%;
+    padding: 20px;
+  }
+}
+.loginPage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+  overflow: hidden;
+
+  /* Background Animated Blobs */
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+    border-radius: 50%;
+    opacity: 0.6;
+    filter: blur(100px);
+    animation: floatingBlobs 10s infinite alternate ease-in-out;
+  }
+
+  &::before {
+    top: 10%;
+    left: -10%;
+  }
+
+  &::after {
+    bottom: 10%;
+    right: -10%;
+    animation-delay: 3s;
+  }
+
+  @keyframes floatingBlobs {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(30px, -50px) scale(1.2);
+    }
+    100% {
+      transform: translate(-30px, 50px) scale(1);
+    }
+  }
+
+  &__left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 2;
+  }
+}
